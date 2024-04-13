@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="headphones.css"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Noto+Sans+JP:wght@100..900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -11,6 +15,22 @@
        
     </head>
     <style>
+
+
+@font-face {
+    .codystar-light {
+  font-family: "Codystar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.codystar-regular {
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}
 
   html, body{ 
 
@@ -64,12 +84,12 @@
 }
 .typewriter {
     position: absolute;
-    top: 7%;
+    top: 8.5vh;
     left: 50%;
     transform: translate(-50%, -50%);
     color: black; /* Text color */
-    font-family: rob, sans-serif; /* Font family */
-    font-size: 20px; /* Font size */
+    font-family: Codystar; /* Font family */
+    font-size: 45px; /* Font size */
     text-align: center; /* Text alignment */
 }
 
@@ -77,38 +97,19 @@
     margin: 0; /* Remove default margin */
     overflow: hidden; /* Hide overflowing text */
     white-space: nowrap; /* Prevent line breaks */
-    border-right: 2px solid black; /* Cursor effect */
-    animation: typing 5s steps(40) infinite alternate; /* Typewriter animation */
+  
 }  
 
-
-
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    80% {
-        width: 100%;
-    }
-    100% {
-        width: 100%;
-    }
+.small{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    font-family: Codystar; /* Font family */
+    font-size: 12px; /* Font size */
+    text-align: center; /* Text alignment */
 }
-
-.typewriter p::after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    overflow: hidden;
-    animation: typing 5s steps(40, end) infinite; /* Typewriter animation */
-}
-
-.typewriter p {
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Hide overflowing text */
-    white-space: nowrap; /* Prevent line breaks */
-}
-
 
     </style>
     <body>
@@ -116,14 +117,16 @@
         <div id="container">
             <div class="page">
                 <div class="typewriter">
-                    <p>Please put your headphones on</p>
+                    <p>Box of drafts</p>
+            
                 </div>
                 
-                <a href="love.html">
+                <a href="stanzaone.html">
                     <div class="baby">
                         <img src="headphones/baby.JPG" alt="">
                     </div>
                 </a>
+                <p class="small">Please put your headphones on to enjoy.</p>
             </div>
         </div>
 

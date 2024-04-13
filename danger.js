@@ -13,7 +13,7 @@ function checkAllPopupsClosed() {
             console.log("Closed popups count:", closedPopupCount); // Log the closed popup count
             if (closedPopupCount === 0) {
                 // Redirect to 'year.html' when all popups are closed
-                window.location.href = "year.html";
+                window.location.href = "stanzathree.html";
             }
         });
     });

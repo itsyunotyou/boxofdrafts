@@ -22,7 +22,7 @@ for (var i = 0; i < petalNumbers; i++){
     clicks += 1
   
     if (petalNumbers == clicks){
-      window.location.replace('danger.html');
+      window.location.replace('stanzatwo.html');
     }
     
     

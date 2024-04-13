@@ -44,6 +44,7 @@ class Dot {
     strokeWeight(0);
     textSize(20);
     text(txt, this.x+8, this.y+10);
+    
   }
   within(px, py) {
     let isWithin = false;
@@ -76,7 +77,7 @@ function touchMoved() {
 
 function draw() {
   background(255, 255, 255);
-  textFont('Times');
+  textFont('Codystar');
     
   for (let i = 0; i < guideDots.length; i++) {
     guideDots[i].plot(222, 160);
@@ -93,7 +94,7 @@ function draw() {
   if (currentIndex == 0) {
     fill(0, 0, 0);
     strokeWeight(0);
-    textSize(15);
+    textSize(10);
     text("☆", guideDots[0].x-5, guideDots[0].y+30);    
   }
   else if (!drawingCompleted) {
@@ -115,7 +116,7 @@ function draw() {
 }
 
 function myURL() {
-  window.location.replace('comment.html');
+  window.location.replace('stanzafour.html');
 }
 
 function fillVertex() {

@@ -1,0 +1,19 @@
+.wrapper {
+    display: none;
+    font-family: Codystar;
+    color: black;
+    user-select: none;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+  }
+
+  #wordDisplay{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }

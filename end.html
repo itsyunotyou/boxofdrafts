@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="headphones.css"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Noto+Sans+JP:wght@100..900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Vehicle Details</title>
+        <!-- Font Link -->
+       
+    </head>
+    <style>
+
+
+@font-face {
+    .codystar-light {
+  font-family: "Codystar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.codystar-regular {
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}
+
+  html, body{ 
+
+    color: black;
+    caret-color: transparent;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: none;
+    overflow: hidden;
+  }
+
+
+  .two{
+    display: flex;
+    flex-direction: row;
+        justify-content: center; /* Horizontally centers content */
+        align-items: center; /* Vertically centers content */
+        height: 100vh; /* Makes sure the container takes up the full height of the viewport */
+        margin: 0; /* Removes default margin */
+  }
+
+  .two img{
+    max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
+    max-height: 80vh; /* Sets the maximum height of the image */
+  }
+
+  p{
+    text-align: center;
+  }
+  #container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+    </style>
+    <body>
+
+        <div id="container">
+            <div class="page">
+ 
+                    <a href="index.html">
+                        <div class="two">
+                            <img src="end/tube.jpeg" alt="">
+                            <img src="end/tree.jpeg" alt="">
+                        </div>
+                    </a>
+
+
+            </div>
+        </div>
+
+
+
+        
+
+        <script>
+                 function load(url) {
+    // display loading image here...
+    document.getElementById('loadingImg').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('container').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+            }
+        }
+    };
+    request.send(vars);
+}
+
+        if (navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i)
+   
+          ) {
+  
+            document.getElementById('container').style.visibility="hidden";
+            document.getElementById('mobile').style.visibility="visible";
+          } 
+          
+          
+          else {
+      
+            document.getElementById('container').style.visibility="visible";
+            document.getElementById('mobile').style.visibility="hidden";
+        }
+      
+
+
+
+
+        </script>
+       
+
+
+
+
+
+    </body>
+
+</html>
