@@ -1,15 +1,15 @@
-.wrapper {
+#wordDisplay {
     display: none;
     font-family: Codystar;
     color: black;
     user-select: none;
     text-align: center;
     margin: 0 auto;
+    transform: translateY(50%);
     position: relative;
-    height: 100vh;
   }
 
-  #wordDisplay{
+  p{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
