@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="headphones.css"></link>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Vehicle Details</title>
+        <!-- Font Link -->
+       
+    </head>
+    <style>
+
+  html, body{ 
+
+    color: black;
+    caret-color: transparent;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: none;
+    overflow: hidden;
+  }
+
+
+  .baby{
+    display: flex;
+        justify-content: center; /* Horizontally centers content */
+        align-items: center; /* Vertically centers content */
+        height: 100vh; /* Makes sure the container takes up the full height of the viewport */
+        margin: 0; /* Removes default margin */
+  }
+
+  .baby img{
+    max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
+    max-height: 80vh; /* Sets the maximum height of the image */
+  }
+
+  p{
+    text-align: center;
+  }
+  #container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 10s ease; /* Transition property for zoom effect */
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.typewriter {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Text color */
+    font-family: rob, sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+    text-align: center; /* Text alignment */
+}
+
+.typewriter p {
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+    border-right: 2px solid black; /* Cursor effect */
+    animation: typing 5s steps(40) infinite alternate; /* Typewriter animation */
+}  
+
+
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    80% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.typewriter p::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    animation: typing 5s steps(40, end) infinite; /* Typewriter animation */
+}
+
+.typewriter p {
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+
+    </style>
+    <body>
+
+        <div id="container">
+            <div class="page">
+                <div class="typewriter">
+                    <p>Please put your headphones on</p>
+                </div>
+                
+                <a href="love.html">
+                    <div class="baby">
+                        <img src="headphones/baby.JPG" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+
+        
+
+        <script>
+                 function load(url) {
+    // display loading image here...
+    document.getElementById('loadingImg').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('container').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+            }
+        }
+    };
+    request.send(vars);
+}
+
+        if (navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i)
+   
+          ) {
+  
+            document.getElementById('container').style.visibility="hidden";
+            document.getElementById('mobile').style.visibility="visible";
+          } 
+          
+          
+          else {
+      
+            document.getElementById('container').style.visibility="visible";
+            document.getElementById('mobile').style.visibility="hidden";
+        }
+      
+
+
+
+
+        </script>
+       
+
+
+
+
+
+    </body>
+
+</html>
